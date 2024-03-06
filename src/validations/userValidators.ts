@@ -3,7 +3,7 @@ import { handleValidationErrors } from '../middlewares/handleValidationErrors';
 
 
 export const createUserValidator = [
-    body('email')
+ body('email')
     .isEmail()
     .withMessage('Please enter a valid email address'),
 
