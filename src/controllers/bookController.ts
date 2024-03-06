@@ -94,8 +94,8 @@ export const searchForBook = asyncHandler(
 
 
 /**
- * @desc    Delete a user
- * @route   DELETE /api/users/:id
+ * @desc    Delete a book
+ * @route   DELETE /api/books/:id
  * @access  Private (only admin)
 */
 export const deleteBook = asyncHandler(
@@ -115,8 +115,8 @@ export const deleteBook = asyncHandler(
 
 
 /**
- * @desc    Update a user
- * @route   PUT /api/users/:id
+ * @desc    Update a book
+ * @route   PUT /api/books/:id
  * @access  Private (only admin)
 */
 export const updateBook = asyncHandler(

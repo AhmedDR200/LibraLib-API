@@ -1,5 +1,6 @@
 import { BaseEntity, Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Book } from "./book";
+import { Review } from "./review";
 
 @Entity('users')
 export class User extends BaseEntity{
@@ -23,4 +24,7 @@ export class User extends BaseEntity{
 
     @OneToMany(() => Book, book => book.user)
     books!: Book[]
+
+    @OneToMany(() => Review, review => review.user)
+    reviews!: Review[]
 };
