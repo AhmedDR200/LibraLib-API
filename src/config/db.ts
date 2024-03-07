@@ -1,6 +1,7 @@
 import { createConnection } from 'typeorm';
 import { User } from '../models/user';
 import { Book } from '../models/book';
+import { Review } from '../models/review';
 
 export const db = createConnection({
     type: 'mysql',
@@ -9,7 +10,7 @@ export const db = createConnection({
     username: 'root',
     password: '',
     database: 'test',
-    entities: [User, Book],
+    entities: [User, Book, Review],
     synchronize: true,
 }).then((connection) => {
     console.log('Database connection established');
